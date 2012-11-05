@@ -1,4 +1,4 @@
-# Rmold
+# rmold
 
 This tool removes long ago modified files and empty directories from given directory.
 
