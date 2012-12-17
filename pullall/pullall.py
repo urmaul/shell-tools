@@ -5,7 +5,7 @@ import os.path
 import sys
 import subprocess
 
-if len(sys.argv) != 2:
+if len(sys.argv) < 2:
 	print "Usage: pullall.py path"
 	exit()
 
