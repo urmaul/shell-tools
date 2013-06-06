@@ -11,13 +11,10 @@ if len(sys.argv) < 2:
 
 path = sys.argv[1]
 
-processes = []
-
 for name in os.listdir( path ):
 	if os.path.isdir( os.path.join(path, name) ):
+		print "pulling " + name
 		os.chdir( os.path.join(path, name) )
 		process = subprocess.Popen(['git', 'pull'])
-		processes.append( process )
+		process.wait()
 
-for process in processes:
-	process.wait()
